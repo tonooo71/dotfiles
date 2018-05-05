@@ -24,7 +24,7 @@ if [ $nw_info != "--" ]; then
         fi
         echo " " # full text
         echo " " # short text
-        echo "#00FF00"
+        echo "#98c379"
     elif [ $nw_type = wifi ]; then
         QUALITY=$(grep $nw_info /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
         #echo "  $nw_ssid($QUALITY%)" # full text
@@ -41,13 +41,13 @@ if [ $nw_info != "--" ]; then
             echo " " # short text
         fi
         if [[ $QUALITY -ge 80 ]]; then
-            echo "#00FF00"
+            echo "#98c379"
         elif [[ $QUALITY -lt 80 ]]; then
-            echo "#FFF600"
+            echo "#e5c07b"
         elif [[ $QUALITY -lt 60 ]]; then
-            echo "#FFAE00"
+            echo "#e5c07b"
         elif [[ $QUALITY -lt 40 ]]; then
-            echo "#FF0000"
+            echo "#e06c75"
         fi
     fi
 else
@@ -58,6 +58,6 @@ else
     fi
     echo " " # full text
     echo " " # full text
-    echo "#FF0000"
+    echo "#e06c75"
 fi
 

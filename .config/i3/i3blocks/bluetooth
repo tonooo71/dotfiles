@@ -13,10 +13,10 @@ echo "  "
 
 if [ $status = "on" ]; then
     if [ $connected -eq 0 ]; then
-        echo "#FFFFFF"
+        echo "#c8ccd4"
     else
-	echo "#00FF00"
+	echo "#98c379"
     fi
 else
-    echo "#FF0000"
+    echo "#e06c75"
 fi

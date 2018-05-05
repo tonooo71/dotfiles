@@ -21,6 +21,7 @@ elif [ $status = "[playing]" ]; then
     esac
     echo "     $music"
     echo "     $music"
+    echo "#98c379"
 elif [ $status = "[stopped]" ]; then
     case $BLOCK_BUTTON in
         1) mpc -q play ;;

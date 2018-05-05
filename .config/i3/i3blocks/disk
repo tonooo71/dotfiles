@@ -7,5 +7,5 @@ echo $used
 echo $used
 
 if [ $used -lt 30 ]; then
-    echo "#FF0000"
+    echo "#e06c75"
 fi

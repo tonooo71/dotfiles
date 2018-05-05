@@ -15,6 +15,6 @@ else
     echo $mem_used_2
 fi
 
-if [ $mem_used_3 -gt 12 ]; then echo "#FF0000"
-elif [ $mem_used_3 -gt 8 ]; then echo "#FFF600"
+if [ $mem_used_3 -gt 12 ]; then echo "#e06c75"
+elif [ $mem_used_3 -gt 8 ]; then echo "#e5c07b"
 fi

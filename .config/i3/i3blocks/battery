@@ -27,15 +27,15 @@ if [ $status = "Discharging" ]; then
     fi
 
     if [ $percent -lt 15 ]; then
-        echo "#FF0000"
+        echo "#e06c75"
     elif [ $percent -lt 35 ]; then
-        echo "#FFAE00"
+        echo "#e5c07b"
     elif [ $percent -lt 55 ]; then
-        echo "#FFF600"
+        echo "#c8ccd4"
     elif [ $percent -lt 75 ]; then
-        echo "#A8FF00"
+        echo "#c8ccd4"
     else
-        echo "#00FF00"
+        echo "#98c379"
     fi
 
 else
@@ -50,7 +50,7 @@ else
     fi
     
     if [ $percent -gt 89 ]; then
-        echo "#00FF00"
+        echo "#98c379"
     fi
 
 fi

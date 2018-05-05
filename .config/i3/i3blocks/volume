@@ -11,7 +11,7 @@ esac
 if [ $mute = "true" ]; then
     echo "  "
     echo "  "
-    echo "#FF0000"
+    echo "#e06c75"
 else
     if [ $volume -eq 0 ]; then
         echo "  ${volume}"
