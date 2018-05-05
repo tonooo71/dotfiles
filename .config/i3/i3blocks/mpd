@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ $(mpc  | wc -l) -eq 1 ]; then
+    status=$(echo "[stopped]")
+elif [ $(mpc | wc -l) -ge 3 ]; then
+    status=$(mpc | sed -n 2P | awk '{print $1}')
+    music=$(mpc -f [%title%/%artist%] | sed -n 1P)
+fi
+
+if [ $status = "[paused]" ]; then
+    case $BLOCK_BUTTON in
+        1) mpc -q play ;;
+        3) gnome-terminal -- ncmpc ;;
+    esac
+    echo "     $music"
+    echo "     $music"
+elif [ $status = "[playing]" ]; then
+    case $BLOCK_BUTTON in
+        1) mpc -q pause ;;
+        3) gnome-terminal -- ncmpc ;;
+    esac
+    echo "     $music"
+    echo "     $music"
+elif [ $status = "[stopped]" ]; then
+    case $BLOCK_BUTTON in
+        1) mpc -q play ;;
+        3) gnome-terminal -- ncmpc ;;
+    esac
+    echo "  -/-"
+    echo "  -/-"
+fi

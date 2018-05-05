@@ -1,0 +1,63 @@
+#!/bin/bash
+
+nw_ssid=$(nmcli c | sed -n 2P | awk '{print $1}')
+nw_type=$(nmcli c | sed -n 2P | awk '{print $(NF-1)}')
+nw_info=$(nmcli c | sed -n 2P | awk '{print $NF}')
+
+case $1 in
+  -4)
+    AF=inet ;;
+  -6)
+    AF=inet6 ;;
+  *)
+    AF=inet6? ;;
+esac
+
+if [ $nw_info != "--" ]; then
+    if [ $nw_type = ethernet ]; then
+        #IPADDR=$(ip addr show $nw_info | perl -n -e "/$AF ([^\/]+).* scope global/ && print \$1 and exit")
+        #echo "  $IPADDR" # full text
+        #echo "  $IPADDR" # short text
+        if [ $BLOCK_BUTTON -eq 3 ]; then
+            # nm-connection-editor &
+            gnome-terminal -- nmtui
+        fi
+        echo " " # full text
+        echo " " # short text
+        echo "#00FF00"
+    elif [ $nw_type = wifi ]; then
+        QUALITY=$(grep $nw_info /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
+        #echo "  $nw_ssid($QUALITY%)" # full text
+        #echo "  $nw_ssid($QUALITY%)" # short text
+        if [ $BLOCK_BUTTON -eq 1 ]; then
+            echo "  $nw_ssid" # full text
+            echo "  $nw_ssid" # short text
+        else
+            if [ $BLOCK_BUTTON -eq 3 ]; then
+                # nm-connection-editor &
+                gnome-terminal -- nmtui
+            fi
+            echo " " # full text
+            echo " " # short text
+        fi
+        if [[ $QUALITY -ge 80 ]]; then
+            echo "#00FF00"
+        elif [[ $QUALITY -lt 80 ]]; then
+            echo "#FFF600"
+        elif [[ $QUALITY -lt 60 ]]; then
+            echo "#FFAE00"
+        elif [[ $QUALITY -lt 40 ]]; then
+            echo "#FF0000"
+        fi
+    fi
+else
+    [ $(nmcli r wifi) = "disabled" ] && nmcli r wifi on
+    if [ $BLOCK_BUTTON -eq 3 ]; then
+        # nm-connection-editor &
+        gnome-terminal -- nmtui
+    fi
+    echo " " # full text
+    echo " " # full text
+    echo "#FF0000"
+fi
+

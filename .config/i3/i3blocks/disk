@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#total= df -h -P -l $HOME | sed -n 2P | awk '{print $2}' | sed -e 's/G//'
+used=$(df -h -P -l $HOME | sed -n 2P | awk '{print $4}' | sed -e 's/G//')
+
+echo $used
+echo $used
+
+if [ $used -lt 30 ]; then
+    echo "#FF0000"
+fi

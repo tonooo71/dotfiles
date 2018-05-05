@@ -1,0 +1,22 @@
+#!/bin/bash
+
+connected=$(echo info | bluetoothctl | grep 'Device' | wc -l)
+status=$(bluetooth | awk '{ print $3 }')
+
+case $BLOCK_BUTTON in
+    1) blueman-manager ;;
+    3) blueman-manager ;;
+esac
+
+echo "  "
+echo "  "
+
+if [ $status = "on" ]; then
+    if [ $connected -eq 0 ]; then
+        echo "#FFFFFF"
+    else
+	echo "#00FF00"
+    fi
+else
+    echo "#FF0000"
+fi

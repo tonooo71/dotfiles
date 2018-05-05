@@ -1,0 +1,53 @@
+#!/bin/bash
+
+info=$(cmus-remote -Q)
+if [ $? -eq 0 ]; then
+    status=$(echo "$info" | grep 'status' | awk '{ sub("status ", ""); print $0 }')
+    artist=$(echo "$info" | grep 'tag artist ' | awk '{ sub(".*artist ", ""); print $0 }')
+    title=$(echo "$info" | grep 'tag title' | awk '{ sub(".*title ", ""); print $0 }')
+#   min_n=$(echo "$info" | grep 'position' | awk '{ sub("position ", ""); print int($0/60) }')
+#   sec_n=$(echo "$info" | grep 'position' | awk '{ sub("position ", ""); print $0%60 }')
+#   min_a=$(echo "$info" | grep 'duration' | awk '{ sub("duration ", ""); print int($0/60) }')
+#   sec_a=$(echo "$info" | grep 'duration' | awk '{ sub("duration ", ""); print $0%60 }')
+#   if [ $sec_n -lt 10 ]; then
+#       sec_n="0$sec_n"
+#   fi
+#   if [ $sec_a -lt 10 ]; then
+#       sec_a="0$sec_a"
+#   fi
+else
+    status=$(echo "no")
+fi
+
+if [ $status = paused ]; then
+    case $BLOCK_BUTTON in
+        1) cmus-remote --play ;;
+        3) cmus-remote --next ;;
+    esac
+    echo "     $title / $artist"
+    echo "     $title / $artist"
+#   echo "     $title / $artist  ($min_n:$sec_n/$min_a:$sec_a)"
+#   echo "     $title / $artist  ($min_n:$sec_n/$min_a:$sec_a)"
+elif [ $status = playing ]; then
+    case $BLOCK_BUTTON in
+        1) cmus-remote --pause ;;
+        3) cmus-remote --next ;;
+    esac
+    echo "     $title / $artist"
+    echo "     $title / $artist"
+#   echo "     $title / $artist  ($min_n:$sec_n/$min_a:$sec_a)"
+#   echo "     $title / $artist  ($min_n:$sec_n/$min_a:$sec_a)"
+elif [ $status = stopped ]; then
+    if [ $BLOCK_BUTTON -gt 0 ]; then
+        i3-msg workspace "9: " -q
+    fi
+    echo "  -/-"
+    echo "  -/-"
+else
+    if [ $BLOCK_BUTTON -gt 0 ]; then
+        i3-msg workspace "9: " -q
+        termite -e cmus &
+    fi
+    echo "  -/-"
+    echo "  -/-"
+fi

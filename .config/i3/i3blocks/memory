@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#mem_total=$(cat /proc/meminfo | grep 'MemTotal' | awk '{print $2}')
+#mem_avail=$(cat /proc/meminfo | grep 'MemAvailable' | awk '{print $2}')
+#mem_used=$(echo "scale=1; ( $mem_total - $mem_avail ) / 1024 / 1024" | bc)
+mem_used=$(free -m | sed -n 2P | awk '{print $3}')
+mem_used_2=$(echo "scale=1; $mem_used / 1024" | bc)
+mem_used_3=${mem_used_2::-2}
+
+if [ ${mem_used_2::1} = "." ]; then
+    echo "0$mem_used_2"
+    echo "0$mem_used_2"
+else
+    echo $mem_used_2
+    echo $mem_used_2
+fi
+
+if [ $mem_used_3 -gt 12 ]; then echo "#FF0000"
+elif [ $mem_used_3 -gt 8 ]; then echo "#FFF600"
+fi

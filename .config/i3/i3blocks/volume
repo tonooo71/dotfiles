@@ -1,0 +1,26 @@
+#!/bin/bash
+
+volume=$(pamixer --get-volume)
+mute=$(pamixer --get-mute)
+
+case $BLOCK_BUTTON in
+    1) pactl set-sink-mute 0 toggle ;;
+    3) pavucontrol & ;;
+esac
+
+if [ $mute = "true" ]; then
+    echo "  "
+    echo "  "
+    echo "#FF0000"
+else
+    if [ $volume -eq 0 ]; then
+        echo "  ${volume}"
+        echo "  ${volume}"
+    elif [ $volume -lt 30 ]; then
+        echo "  ${volume}"
+        echo "  ${volume}"
+    else
+        echo "  ${volume}"
+        echo "  ${volume}"
+    fi
+fi
