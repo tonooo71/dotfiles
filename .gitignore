@@ -1,0 +1,16 @@
+# ignore all files
+/*
+# add files
+!/.Xdefaults
+!/.bashrc
+!/.xprofile
+!/.config
+/.config/*
+!/.config/compton
+!/.config/i3
+!/.config/nvim
+!/.config/termite
+# delete files
+.netrwhist
+!.gitignore
+
