@@ -12,15 +12,15 @@ if [ $status = "[paused]" ]; then
         1) mpc -q play ;;
         3) gnome-terminal -- ncmpc ;;
     esac
-    echo "     $music"
-    echo "     $music"
+    echo "    $music"
+    echo "    $music"
 elif [ $status = "[playing]" ]; then
     case $BLOCK_BUTTON in
         1) mpc -q pause ;;
         3) gnome-terminal -- ncmpc ;;
     esac
-    echo "     $music"
-    echo "     $music"
+    echo "    $music"
+    echo "    $music"
     echo "#98c379"
 elif [ $status = "[stopped]" ]; then
     case $BLOCK_BUTTON in
