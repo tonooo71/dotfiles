@@ -1,0 +1,317 @@
+[colors]
+mono0 = #282c34
+mono1 = #545862
+mono2 = #abb2bf
+mono3 = #c8ccd4
+red = #e06c75
+green = #98c379
+yellow = #e5c07b
+blue = #61afef
+purple = #c678dd
+teal = #56b6c2
+mono4 = #353b45
+
+[bar/HDMI1]
+monitor = ${env:MONITOR:HDMI1}
+bottom = true
+fixed-center = true
+
+width = 100%
+height = 25
+offset-x = 0%
+offset-y = 0%
+radius = 0.0
+
+background = ${colors.mono0}
+foreground = ${colors.green}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = #00282c34
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Source Han Code JP H:pixelsize=11;2
+font-1 = FontAwesome:pixelsize=12;3
+
+modules-left = i3
+modules-center = ncmpc mpd
+modules-right = bluetooth update network memory battery volume date
+
+separator = 
+dim-value = 1.0
+
+;tray-position = 
+;tray-padding = 0
+;tray-transparent = false
+;tray-background = ${root.background}
+
+;wm-restack = i3
+;override-redirect = true
+enable-ipc = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = default
+
+[bar/eDP1]
+monitor = ${env:MONITOR:eDP1}
+bottom = true
+fixed-center = true
+
+width = 100%
+height = 25
+offset-x = 0%
+offset-y = 0%
+radius = 0.0
+
+background = ${colors.mono0}
+foreground = ${colors.green}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = #00282c34
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Source Han Code JP H:pixelsize=11;2
+font-1 = FontAwesome:pixelsize=12;3
+
+modules-left = i3
+modules-center = ncmpc mpd
+modules-right = bluetooth update network memory battery volume date
+
+separator = 
+dim-value = 1.0
+
+;tray-position = 
+;tray-padding = 0
+;tray-transparent = false
+;tray-background = ${root.background}
+
+;wm-restack = i3
+;override-redirect = true
+enable-ipc = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = default
+
+[bar/DP2]
+monitor = ${env:MONITOR:DP2}
+bottom = true
+fixed-center = true
+
+width = 100%
+height = 25
+offset-x = 0%
+offset-y = 0%
+radius = 0.0
+
+background = ${colors.mono0}
+foreground = ${colors.green}
+
+line-size = 2
+line-color = #f00
+
+border-size = 0
+border-color = #00282c34
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = Source Han Code JP H:pixelsize=11;2
+font-1 = FontAwesome:pixelsize=12;3
+
+modules-left = i3
+modules-center = ncmpc mpd
+modules-right = bluetooth update network memory battery volume date
+
+separator = 
+dim-value = 1.0
+
+;tray-position = 
+;tray-padding = 0
+;tray-transparent = false
+;tray-background = ${root.background}
+
+;wm-restack = i3
+;override-redirect = true
+enable-ipc = true
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = default
+
+[module/xwindow]
+type = internal/xwindow
+label = %title%
+
+[module/ewmh]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = true
+enable-scroll = false
+format = <label-state>
+label-monitor = %name%
+label-active = %name%
+label-active-foreground = #ffffff
+label-active-background = #3f3f3f
+label-occupied = %name%
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-empty = %name%
+label-empty-foreground = #55
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+;label-mode-padding = 2
+;label-mode-foreground = #000
+;label-mode-background = ${colors.mono0}
+
+; focused = Active workspace on focused monitor
+label-focused = %index%
+label-focused-background = ${colors.green}
+label-focused-foreground = ${colors.mono0}
+label-focused-padding = 2
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %index%
+label-unfocused-underline = ${colors.green}
+label-unfocused-padding = 2
+
+; visible = Active workspace on unfocused monitor
+label-visible = %index%
+label-visible-background = ${colors.mono4}
+label-visible-foreground = ${colors.mono2}
+label-visible-padding = 2
+
+; urgent = Workspace with urgency hint set
+label-urgent = %index%
+label-urgent-background = ${colors.red}
+label-urgent-padding = 2
+
+[module/ncmpc]
+type = custom/text
+content = " "
+click-left = exec gnome-terminal -- ncmpc &
+click-right = exec gnome-terminal -- ncmpc &
+
+[module/mpd]
+type = internal/mpd
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+
+label-song-maxlen = 50
+label-song-ellipsis = true
+
+[module/bluetooth]
+type = custom/script
+exec = echo "%{F#98c379}"
+exec-if = echo info | bluetoothctl | grep 'Device'
+interval = 10
+click-left = exec blueman-manager
+click-right = exec blueman-manager
+format-padding = 1
+format-background = ${colors.mono4}
+format-foreground = ${colors.mono2}
+
+[module/update]
+type = custom/script
+exec = echo "%{F#e5c07b} $(checkupdates | wc -l)"
+exec-if = checkupdates | grep '->'
+interval = 21600
+format-padding = 1
+format-background = ${colors.mono4}
+format-foreground = ${colors.mono2}
+
+[module/memory]
+type = custom/script
+exec = ~/.config/polybar/scripts/memory
+interval = 10
+format-padding = 1
+format-background = ${colors.mono4}
+format-foreground = ${colors.mono2}
+
+[module/network]
+type = custom/script
+exec = ~/.config/polybar/scripts/network
+interval = 10
+click-left = exec gnome-terminal -- nmtui &
+click-right = exec gnome-terminal -- nmtui &
+format-padding = 1
+format-background = ${colors.mono4}
+format-foreground = ${colors.mono2}
+
+[module/date]
+type = custom/script
+exec = date '+%H:%M'
+format-prefix = " "
+interval = 60
+format-background = ${colors.green}
+format-foreground = ${colors.mono0}
+format-padding = 1
+
+[module/volume]
+type = custom/script
+exec = ~/.config/polybar/scripts/volume
+click-left = exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+click-right = exec pavucontrol &
+interval = 1
+format-padding = 1
+format-background = ${colors.mono4}
+format-foreground = ${colors.mono2}
+
+[module/battery]
+type = custom/script
+exec = ~/.config/polybar/scripts/battery
+interval = 20
+format-padding = 1
+format-background = ${colors.mono4}
+format-foreground = ${colors.mono2}
+
+[module/refresh]
+type = 
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+
+; vim:ft=dosini

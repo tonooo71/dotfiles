@@ -13,8 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-#font pango:monospace 8
-font pango:FontAwesome,DejaVu Sans Bold 11
+#font pango:FontAwesome,DejaVu Sans Bold 12
+font pango:monospace 0
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -43,7 +43,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec $HOME/.config/i3/script/rofi_launch.sh
+bindsym $mod+d exec ~/.config/i3/script/rofi_launch.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -150,7 +150,7 @@ bindsym $mod+Shift+Next move workspace to output down
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r exec --no-startup-id ~/.config/polybar/launch.sh restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -188,25 +188,23 @@ client.unfocused        #545862 #545862 #abb2bf #545862   #545862
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        tray_output none
-        status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	#font pango:SauceCodePro Nerd Font Bold 12
-	#font pango:FontAwesome,IPAPGothic 12
-	font pango:FontAwesome,DejaVu Sans Bold 11
-	position bottom
-	tray_padding 2
-	colors {
-		background		#545862
-		statusline		#c8ccd4
-
+#bar {
+#        tray_output none
+#        status_command i3blocks -c ~/.config/i3/i3blocks.conf
+#	font pango:FontAwesome,DejaVu Sans Bold 11
+#	position bottom
+#	tray_padding 2
+#	colors {
+#		background		#545862
+#		statusline		#c8ccd4
+#
 #		<colorclass>		<border> <background>	<text>
-		focused_workspace	#98c379  #98c379	#282c34
-		inactive_workspace	#545862  #545862	#abb2bf
-		active_workspace	#545862  #545862f	#abb2bf
-		urgent_workspace	#e5c07b	 #e5c07b	#282c34
-	}
-}
+#		focused_workspace	#98c379  #98c379	#282c34
+#		inactive_workspace	#545862  #545862	#abb2bf
+#		active_workspace	#545862  #545862f	#abb2bf
+#		urgent_workspace	#e5c07b	 #e5c07b	#282c34
+#	}
+#}
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -221,6 +219,7 @@ bindsym Print exec --no-startup-id import -window root ~/Pictures/screenshot`dat
 
 # startup apps
 #exec --no-startup-id nm-applet
+exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id fcitx
 exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
 exec --no-startup-id ~/.fehbg

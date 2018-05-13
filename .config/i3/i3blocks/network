@@ -40,11 +40,9 @@ if [ $nw_info != "--" ]; then
             echo " " # full text
             echo " " # short text
         fi
-        if [[ $QUALITY -ge 80 ]]; then
+        if [[ $QUALITY -ge 70 ]]; then
             echo "#98c379"
-        elif [[ $QUALITY -lt 80 ]]; then
-            echo "#e5c07b"
-        elif [[ $QUALITY -lt 60 ]]; then
+        elif [[ $QUALITY -lt 77777770 ]]; then
             echo "#e5c07b"
         elif [[ $QUALITY -lt 40 ]]; then
             echo "#e06c75"

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+updates_pacman=$(checkupdates | wc -l)
+updates_yaourt=$(yaourt -Qua | wc -l)
+
+case $BLOCK_BUTTON in
+	1) termite -e 'yaourt -Syua' ;;
+	3) termite -e 'yaourt -Syua' ;;
+esac
+
+if [[ $updates_yaourt -eq 0 ]]; then
+	echo "  0"
+	echo "  0"
+else
+	echo "  $updates_yaourt"
+	echo "  $updates_yaourt"
+	if [[ $yaourt -lt 15 ]]; then
+		echo "#e5c07b"
+	else
+		echo "#e06c75"
+	fi
+fi
+

@@ -4,7 +4,7 @@ volume=$(pamixer --get-volume)
 mute=$(pamixer --get-mute)
 
 case $BLOCK_BUTTON in
-    1) pactl set-sink-mute 0 toggle ;;
+    1) pactl set-sink-mute @DEFAULT_SINK@ toggle ;;
     3) pavucontrol & ;;
 esac
 
