@@ -5,7 +5,7 @@ if [[ $1 = "restart" ]]; then
 	i3-msg restart
 fi
 
- Terminate already running bar instances
+# Terminate already running bar instances
 killall -q polybar
 
 # Wait until the processes have been shut down

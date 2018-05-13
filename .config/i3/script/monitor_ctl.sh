@@ -16,3 +16,4 @@ if xrandr | grep "HDMI1 connected"; then
 fi
 
 ~/.fehbg
+~/.config/polybar/launch.sh

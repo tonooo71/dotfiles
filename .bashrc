@@ -16,7 +16,7 @@ export PATH="${PATH}":/opt/hmetis-2.0pre1/Linux-x86_64/
 export PATH="${PATH}":/opt/alanmi-abc-c3ebee81b8d8/
 
 # ranger
-export EDITOR=nano
+export EDITOR=nvim
 
 # neovim
 export XDG_CONFIG_HOME=~/.config

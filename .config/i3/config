@@ -96,24 +96,21 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace icon
-set $workspace1 "1: "
-set $workspace2 "2: "
-set $workspace3 "3: "
-set $workspace4 "4: "
+set $workspace1 "1"
+set $workspace2 "2"
+set $workspace3 "3"
+set $workspace4 "4"
 set $workspace5 "5"
 set $workspace6 "6"
 set $workspace7 "7"
 set $workspace8 "8"
 set $workspace9 "9"
-set $workspace10 "10: "
+set $workspace10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
-#bindsym $mod+2 workspace $workspace2
 bindsym $mod+2 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Vivaldi-stable vivaldi-stable $workspace2
-#bindsym $mod+3 workspace $workspace3
 bindsym $mod+3 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Code code $workspace3
-#bindsym $mod+4 workspace $workspace4
 bindsym $mod+4 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Thunderbird thunderbird $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
@@ -138,10 +135,6 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 #assign applications
 #assign [class="Firefox"] $workspace2
-#assign [class="Code"] $workspace3
-#assign [class="Thunderbird"] $workspace4
-#assign [class="Nautilus"] $workspace5
-assign [class="VirtualBox Machine"] $workspace10
 
 #move workspace
 bindsym $mod+Shift+Prior move workspace to output up
@@ -218,21 +211,21 @@ bindsym $mod+F8 exec --no-startup-id bash $HOME/.config/i3/script/monitor_ctl.sh
 bindsym Print exec --no-startup-id import -window root ~/Pictures/screenshot`date "+%y%m%d%H%M"`.jpg
 
 # startup apps
-#exec --no-startup-id nm-applet
-exec --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id fcitx
 exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
-exec --no-startup-id ~/.fehbg
-exec --no-startup-id dropbox
-exec --no-startup-id light-locker --lock-on-suspend
-# exec --no-startup-id i3-msg 'workspace "1: "; exec termite'
 exec --no-startup-id ~/.config/i3/script/monitor_detect.sh
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id fcitx
+exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id light-locker --lock-on-suspend
+exec --no-startup-id xset s off -dpms
+exec --no-startup-id dropbox
+#exec --no-startup-id nm-applet
 
 # application setting(float)
 for_window [class="Lxappearance"] floating enable, resize set 600 400
 for_window [class="Pavucontrol"] floating enable, resize set 600 400
 for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400
 for_window [class="mozc_tool"] floating enable, resize set 600 400
-# for_window [class="Nm-connection-editor"] floating enable, resize set 600 400
 for_window [class="Blueman-manager"] floating enable, resize set 600 400
 for_window [class="Gnome-terminal"] floating enable move absolute position 990 px 470 px, resize set 600 400
+# for_window [class="Nm-connection-editor"] floating enable, resize set 600 400

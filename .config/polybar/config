@@ -11,8 +11,8 @@ purple = #c678dd
 teal = #56b6c2
 mono4 = #353b45
 
-[bar/HDMI1]
-monitor = ${env:MONITOR:HDMI1}
+[bar/eDP1]
+monitor = ${env:MONITOR:eDP1}
 bottom = true
 fixed-center = true
 
@@ -40,7 +40,7 @@ module-margin-right = 0
 font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
-modules-left = i3
+modules-left = i3 add_ws
 modules-center = ncmpcpp mpd
 modules-right = bluetooth update network memory battery volume date
 
@@ -62,8 +62,8 @@ scroll-down = i3wm-wsprev
 cursor-click = pointer
 cursor-scroll = default
 
-[bar/eDP1]
-monitor = ${env:MONITOR:eDP1}
+[bar/HDMI1]
+monitor = ${env:MONITOR:HDMI1}
 bottom = true
 fixed-center = true
 
@@ -164,6 +164,14 @@ scroll-down = i3wm-wsprev
 cursor-click = pointer
 cursor-scroll = default
 
+[module/add_ws]
+type = custom/text
+content = 
+content-padding = 1
+content-background = ${colors.mono4}
+content-foreground = ${colors.mono2}
+click-left = exec ~/.config/polybar/scripts/add_ws.py
+
 [module/xwindow]
 type = internal/xwindow
 label = %title%
@@ -257,7 +265,7 @@ format-foreground = ${colors.mono2}
 
 [module/memory]
 type = custom/script
-exec = ~/.config/polybar/scripts/memory
+exec = ~/.config/polybar/scripts/memory.sh
 interval = 10
 format-padding = 1
 format-background = ${colors.mono4}
@@ -265,7 +273,7 @@ format-foreground = ${colors.mono2}
 
 [module/network]
 type = custom/script
-exec = ~/.config/polybar/scripts/network
+exec = ~/.config/polybar/scripts/network.sh
 interval = 10
 click-left = exec gnome-terminal -- nmtui &
 click-right = exec gnome-terminal -- nmtui &
@@ -284,7 +292,7 @@ format-padding = 1
 
 [module/volume]
 type = custom/script
-exec = ~/.config/polybar/scripts/volume
+exec = ~/.config/polybar/scripts/volume.sh
 click-left = exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 click-right = exec pavucontrol &
 interval = 1
@@ -294,14 +302,11 @@ format-foreground = ${colors.mono2}
 
 [module/battery]
 type = custom/script
-exec = ~/.config/polybar/scripts/battery
+exec = ~/.config/polybar/scripts/battery.sh
 interval = 20
 format-padding = 1
 format-background = ${colors.mono4}
 format-foreground = ${colors.mono2}
-
-[module/refresh]
-type = 
 
 [settings]
 screenchange-reload = true
