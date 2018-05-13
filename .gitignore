@@ -4,6 +4,7 @@
 !/.Xdefaults
 !/.bashrc
 !/.xprofile
+!/.ncmpcpp/config
 !/.config
 /.config/*
 !/.config/compton
