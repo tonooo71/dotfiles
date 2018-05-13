@@ -41,7 +41,7 @@ font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3
-modules-center = ncmpc mpd
+modules-center = ncmpcpp mpd
 modules-right = bluetooth update network memory battery volume date
 
 separator = 
@@ -92,7 +92,7 @@ font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3
-modules-center = ncmpc mpd
+modules-center = ncmpcpp mpd
 modules-right = bluetooth update network memory battery volume date
 
 separator = 
@@ -143,7 +143,7 @@ font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3
-modules-center = ncmpc mpd
+modules-center = ncmpcpp mpd
 modules-right = bluetooth update network memory battery volume date
 
 separator = 
@@ -216,11 +216,11 @@ label-urgent = %index%
 label-urgent-background = ${colors.red}
 label-urgent-padding = 2
 
-[module/ncmpc]
+[module/ncmpcpp]
 type = custom/text
 content = " "
-click-left = exec gnome-terminal -- ncmpc &
-click-right = exec gnome-terminal -- ncmpc &
+click-left = exec gnome-terminal -- ncmpcpp &
+click-right = exec gnome-terminal -- ncmpcpp &
 
 [module/mpd]
 type = internal/mpd

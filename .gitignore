@@ -11,6 +11,9 @@
 !/.config/nvim
 !/.config/termite
 !/.config/polybar
+!/.config/mpd
+/.config/mpd/*
+/.config/mpd/mpd.conf
 # delete files
 .netrwhist
 !.gitignore
