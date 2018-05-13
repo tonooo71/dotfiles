@@ -4,6 +4,8 @@
 !/.Xdefaults
 !/.bashrc
 !/.xprofile
+!/.ncmpcpp
+/.ncmpcpp/*
 !/.ncmpcpp/config
 !/.config
 /.config/*
