@@ -210,6 +210,8 @@ label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
+label-unfocused-background = ${colors.mono4}
+label-unfocused-foreground = ${colors.mono2}
 label-unfocused-underline = ${colors.green}
 label-unfocused-padding = 2
 
@@ -222,6 +224,7 @@ label-visible-padding = 2
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
 label-urgent-background = ${colors.red}
+label-urgent-foreground = ${colors.mono0}
 label-urgent-padding = 2
 
 [module/ncmpcpp]
