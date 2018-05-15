@@ -14,6 +14,8 @@
 !/.config/nvim
 !/.config/termite
 !/.config/polybar
+!/.config/pylintrc
+!/.config/flake8
 !/.config/mpd
 /.config/mpd/*
 !/.config/mpd/mpd.conf
