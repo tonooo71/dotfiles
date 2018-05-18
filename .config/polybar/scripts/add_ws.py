@@ -2,8 +2,8 @@
 import subprocess
 import i3
 
-max_ws = 4
-ws_list = [[x,0] for x in range(10)]
+max_ws = 0
+ws_list = [[x, 0] for x in range(10)]
 # get a list of workspaces
 for workspace in i3.get_workspaces():
     # get the workspace tree data

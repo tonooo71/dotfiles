@@ -108,10 +108,14 @@ set $workspace9 "9"
 set $workspace10 "10"
 
 # switch to workspace
+bindsym $mod+Zenkaku_Hankaku exec --no-startup-id ~/.config/polybar/scripts/add_ws.py
 bindsym $mod+1 workspace $workspace1
-bindsym $mod+2 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Vivaldi-stable vivaldi-stable $workspace2
-bindsym $mod+3 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Code code $workspace3
-bindsym $mod+4 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Thunderbird thunderbird $workspace4
+#bindsym $mod+2 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Vivaldi-stable vivaldi-stable $workspace2
+bindsym $mod+2 workspace $workspace2
+#bindsym $mod+3 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Code code $workspace3
+bindsym $mod+3 workspace $workspace3
+#bindsym $mod+4 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Thunderbird thunderbird $workspace4
+bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
 bindsym $mod+7 workspace $workspace7
@@ -155,16 +159,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym semicolon resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
