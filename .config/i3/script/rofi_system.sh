@@ -3,7 +3,7 @@
 
 list=(
   ##  Lock  ##
-  "Lock Screen" "i3lock"
+  "Lock Screen" "light-locker-command -l"
   ##  Power ##
   "Reboot"      "systemctl reboot"
   "Shutdown"    "systemctl poweroff"
