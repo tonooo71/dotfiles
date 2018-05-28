@@ -14,5 +14,5 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch bar
 polybar eDP1 &
 polybar HDMI1 &
-polybar DP2 &
+polybar DP2
 
