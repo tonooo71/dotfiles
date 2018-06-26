@@ -25,7 +25,7 @@ do
         if [ $st_next = "eDP1" ]; then
             xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off --output DP2 --off
         elif [ $st_next = "HDMI1" ]; then
-            xrandr --output eDP1 --mode 1600x900 --output HDMI1 --auto --above eDP1  --output DP2 --off
+            xrandr --output eDP1 --mode 1600x900 --output HDMI1 --auto --above eDP1 --output DP2 --off
         elif [ $st_next = "DP2" ]; then
             xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off --output DP2 --auto --above eDP1
         elif [ $st_next = "ALL" ]; then
