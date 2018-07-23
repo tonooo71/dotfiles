@@ -5,7 +5,7 @@ alpha="cc"   # opacity (00〜FF)
 
 options=(
 # -modi            "combi,system:$HOME/.config/i3/script/rofi_system.sh,run,ssh"
-  -modi            "drun,window,system:$HOME/.config/i3/script/rofi_system.sh"
+  -modi            "drun,system:$HOME/.config/i3/script/rofi_system.sh,window"
 #  -combi-modi      "window,drun"
   -show            "drun"
   -font            "Monospace Bold 12"

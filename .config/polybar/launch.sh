@@ -3,6 +3,7 @@
 ## restart i3
 if [[ $1 = "restart" ]]; then
 	i3-msg restart
+	sleep 1
 fi
 
 # Terminate already running bar instances

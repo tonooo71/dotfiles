@@ -261,6 +261,7 @@ type = custom/script
 exec = echo "%{F#e5c07b} $(checkupdates | wc -l)"
 exec-if = checkupdates | grep '\->'
 interval = 3600
+click-left = exec termite -e 'yay -Syu'
 format-padding = 1
 format-background = ${colors.mono4}
 format-foreground = ${colors.mono2}
