@@ -1,19 +1,17 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
-[[plugins]] 
-repo = 'Shougo/neosnippet.vim'
+#[[plugins]] 
+#repo = 'Shougo/neosnippet.vim'
 
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+#[[plugins]]
+#repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'
 rev = 'a1b5108fd'
 
 [[plugins]]
-#repo = 'lifepillar/vim-solarized8'
-#repo = 'mhartington/oceanic-next'
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
@@ -37,22 +35,6 @@ hook_add = '''
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-    nnoremap <Space>f :<C-u>NERDTreeToggle<CR>
-'''
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-depends = ['vim-fugitive']
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'

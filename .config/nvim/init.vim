@@ -33,6 +33,6 @@ endif
 set number
 set termguicolors
 set background=light
-" colorscheme solarized8_flat
-" colorscheme OceanicNext
 colorscheme onedark
+
+tnoremap <silent> <ESC> <C-\><C-n>
