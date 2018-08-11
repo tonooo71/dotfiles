@@ -8,6 +8,9 @@ repo = 'Shougo/dein.vim'
 #repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
 repo = 'Shougo/deol.nvim'
 rev = 'a1b5108fd'
 
@@ -37,5 +40,39 @@ hook_add = '''
 repo = 'vim-airline/vim-airline-themes'
 
 [[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'
+hook_source = '''
+    set hidden
+    let g:LanguageClient_autoStart = 1
+    let g:LanguageClient_serverCommands = {
+        \ 'c': ['clangd'],
+        \ 'cpp': ['clangd'],
+	\ 'python': ['pyls'],
+\ }
+'''
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+    nnoremap <Space>f :<C-u>NERDTreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+#hook_source = '''
+#    set guifont=SauceCodePro\ Nerd\ Font\ 13
+#'''
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+depends = ['vim-fugitive']
+
 

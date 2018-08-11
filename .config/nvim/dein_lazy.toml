@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 if = 'has("nvim")'
 on_i = 1
@@ -21,63 +18,44 @@ hook_post_source = '''
     let g:deoplete#omni_patterns = {}
 '''
 
-[[plugins]]
-repo = 'zchee/deoplete-jedi'
-on_ft = ['python']
+#[[plugins]]
+#repo = 'zchee/deoplete-jedi'
+#on_ft = ['python']
 
 [[plugins]]
-repo = 'zchee/deoplete-clang'
+repo = 'Shougo/neoinclude.vim'
 on_ft = ['c','cpp']
-hook_source = '''
-    let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-    let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
-'''
+depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 on_ft = ['python', 'sh']
 
-[[plugins]]
-repo = 'w0rp/ale'
-on_ft = ['python']
-hook_source = '''
-    let g:ale_enabled = 1
-    let g:ale_sign_error = '⨉'
-    let g:ale_sign_warning = '⚠'
-    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
-    let g:ale_sign_column_always = 1
-    let g:ale_lint_on_enter = 1
-    let g:ale_lint_on_save = 1
-    let g:ale_lint_on_text_changed = 'never'
-    let g:ale_set_loclist = 0
-    let g:ale_set_quickfix = 0
-    let g:ale_open_list = 0
-    let g:ale_keep_list_window_open = 0
-    let g:ale_statusline_format = ['%d Error', '%d Warn', 'OK']
-    let g:ale_linters = {
-    \    'python': ['flake8','pylint'],
-    \}
-    nmap <silent> [a <Plug>(ale_previous)
-    nmap <silent> ]a <Plug>(ale_next)
-'''
+#[[plugins]]
+#repo = 'w0rp/ale'
+#on_ft = ['python']
+#hook_source = '''
+#    let g:ale_enabled = 1
+#    let g:ale_sign_error = '⨉'
+#    let g:ale_sign_warning = '⚠'
+#    let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+#    let g:ale_sign_column_always = 1
+#    let g:ale_lint_on_enter = 1
+#    let g:ale_lint_on_save = 1
+#    let g:ale_lint_on_text_changed = 'never'
+#    let g:ale_set_loclist = 0
+#    let g:ale_set_quickfix = 0
+#    let g:ale_open_list = 0
+#    let g:ale_keep_list_window_open = 0
+#    let g:ale_statusline_format = ['%d Error', '%d Warn', 'OK']
+#    let g:ale_linters = {
+#    \    'python': ['flake8','pylint'],
+#    \}
+#    nmap <silent> [a <Plug>(ale_previous)
+#    nmap <silent> ]a <Plug>(ale_next)
+#'''
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
 on_i = 1
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_add = '''
-    nnoremap <Space>f :<C-u>NERDTreeToggle<CR>
-'''
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-depends = ['vim-fugitive']
 
