@@ -43,7 +43,7 @@ repo = 'vim-airline/vim-airline-themes'
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
-hook_source = '''
+hook_add = '''
     set hidden
     let g:LanguageClient_autoStart = 1
     let g:LanguageClient_serverCommands = {
@@ -74,5 +74,4 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'Xuyuanp/nerdtree-git-plugin'
 depends = ['vim-fugitive']
-
 
