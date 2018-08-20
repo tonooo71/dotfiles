@@ -21,7 +21,7 @@ bash 4.4.023-1
 bc 1.07.1-1
 binutils 2.31.1-3
 bison 3.0.5-1
-blueman 2.0.5-3
+blueman 2.0.6-1
 bluez 5.50-3
 bluez-libs 5.50-3
 bluez-utils 5.50-3
@@ -44,7 +44,7 @@ clucene 2.3.3.4-10
 cmake 3.11.4-2
 colord 1.4.3-2
 compiler-rt 6.0.1-2
-confuse 3.2.1-1
+confuse 3.2.2-1
 coreutils 8.29-1
 cpupower 4.18-1
 cracklib 2.9.6-1
@@ -194,7 +194,7 @@ krb5 1.16.1-1
 l-smash 2.14.5-1
 lame 3.100-2
 lcms2 2.9-1
-ldb 1:1.3.4-2
+ldb 1:1.3.5-1
 ldns 1.7.0-4
 less 530-1
 libabw 0.1.2-1
@@ -304,7 +304,7 @@ libpulse 12.2-2
 libqxp 0.0.1-3
 libraqm 0.5.0-1
 libraw1394 2.1.2-1
-libreoffice-fresh 6.1.0-1
+libreoffice-fresh 6.1.0-2
 librevenge 0.0.4-2
 librsvg 2:2.42.6-1
 libsamplerate 0.1.9-1
@@ -348,7 +348,7 @@ libvorbis 1.3.6-1
 libvpx 1.7.0-1
 libvterm 0.1.git1.c4317a6-3
 libwacom 0.30-1
-libwbclient 4.8.3-2
+libwbclient 4.8.4-1
 libwebp 1.0.0-1
 libwpd 0.10.2-1
 libwpg 0.3.2-1
@@ -497,7 +497,7 @@ python-dbus 1.2.8-2
 python-dbus-common 1.2.8-2
 python-gobject 3.28.3-2
 python2 2.7.15-2
-qpdf 8.1.0-1
+qpdf 8.2.1-1
 qt4 4.8.7-25
 qt5-base 5.11.1-2
 qt5-x11extras 5.11.1-1
@@ -521,7 +521,7 @@ sed 4.5-1
 shadow 4.5-4
 shared-mime-info 1.10-1
 slang 2.3.2-1
-smbclient 4.8.3-2
+smbclient 4.8.4-1
 snappy 1.1.7-1
 sound-theme-freedesktop 0.8-3
 speex 1.2.0-1
@@ -535,11 +535,11 @@ systemd-sysvcompat 239.0-2
 taglib 1.11.1-1
 talloc 2.1.14-1
 tar 1.30-1
-tdb 1.3.15-1
+tdb 1.3.16-1
 teams-for-linux 0.0.7-3
 termite 13-3
 termite-terminfo 13-3
-tevent 1:0.9.36-1
+tevent 1:0.9.37-1
 texinfo 6.5-1
 thin-provisioning-tools 0.7.6-1
 thunderbird 60.0-3
