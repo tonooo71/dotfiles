@@ -176,23 +176,6 @@ click-left = exec ~/.config/polybar/scripts/add_ws.py
 type = internal/xwindow
 label = %title%
 
-[module/ewmh]
-type = internal/xworkspaces
-pin-workspaces = true
-enable-click = true
-enable-scroll = false
-format = <label-state>
-label-monitor = %name%
-label-active = %name%
-label-active-foreground = #ffffff
-label-active-background = #3f3f3f
-label-occupied = %name%
-label-urgent = %name%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-empty = %name%
-label-empty-foreground = #55
-
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>

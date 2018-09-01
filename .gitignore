@@ -1,12 +1,15 @@
 # ignore all files
 /*
-# add files
 !/.Xdefaults
 !/.bashrc
 !/.xprofile
+!.gitignore
+!dotfiles.sh
+#ncmcpp
 !/.ncmpcpp
 /.ncmpcpp/*
 !/.ncmpcpp/config
+# .config
 !/.config
 /.config/*
 !/.config/compton
@@ -14,14 +17,20 @@
 !/.config/nvim
 !/.config/termite
 !/.config/polybar
+# mpd
 !/.config/mpd
 /.config/mpd/*
 !/.config/mpd/mpd.conf
+# ranger
 !/.config/ranger
 /.config/ranger/*
 !/.config/ranger/rc.conf
 !/.config/packagelist
+# qutebrowser
+!/.config/qutebrowser
+/.config/qutebrowser/*
+!/.config/qutebrowser/config.py
+!/.config/qutebrowser/settings
 # delete files
 .netrwhist
-!.gitignore
-!dotfiles.sh
+
