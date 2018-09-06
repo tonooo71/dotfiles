@@ -32,8 +32,8 @@
 !/.config/qutebrowser/config.py
 !/.config/qutebrowser/settings
 # rofi
-#!/.config/rofi
-#/.config/rofi/*
+!/.config/rofi
+/.config/rofi/*
 #/.config/rofi/config.rasi
 #/.config/rofi/*.sh
 # delete files
