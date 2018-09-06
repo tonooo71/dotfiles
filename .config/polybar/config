@@ -212,12 +212,12 @@ label-urgent-padding = 2
 [module/ncmpcpp]
 type = custom/text
 content = " "
-click-left = exec gnome-terminal -- ncmpcpp &
-click-right = exec gnome-terminal -- ncmpcpp &
+click-left = exec termite -e ncmpcpp &
+click-right = exec termite -e ncmpcpp &
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next> <label-song>
+format-online = <icon-prev> <icon-stop> <toggle> <icon-next>
 
 icon-prev = 
 icon-stop = 
@@ -261,8 +261,8 @@ format-foreground = ${colors.mono2}
 type = custom/script
 exec = ~/.config/polybar/scripts/network.sh
 interval = 10
-click-left = exec gnome-terminal -- nmtui &
-click-right = exec gnome-terminal -- nmtui &
+click-left = exec termite -e nmtui &
+click-right = exec termite -e nmtui &
 format-padding = 1
 format-background = ${colors.mono4}
 format-foreground = ${colors.mono2}

@@ -31,19 +31,13 @@ font pango:Source Han Code JP H 9
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec ~/.config/i3/script/rofi_launch.sh
+bindsym $mod+d exec ~/.config/rofi/rofi_launch.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -112,9 +106,7 @@ bindsym $mod+Zenkaku_Hankaku exec --no-startup-id ~/.config/polybar/scripts/add_
 bindsym $mod+1 workspace $workspace1
 #bindsym $mod+2 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Vivaldi-stable vivaldi-stable $workspace2
 bindsym $mod+2 workspace $workspace2
-#bindsym $mod+3 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Code code $workspace3
 bindsym $mod+3 workspace $workspace3
-#bindsym $mod+4 exec --no-startup-id ~/.config/i3/script/i3runorraise.sh Thunderbird thunderbird $workspace4
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
 bindsym $mod+6 workspace $workspace6
@@ -138,7 +130,6 @@ bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 #assign applications
-#assign [class="Firefox"] $workspace2
 
 #move workspace
 bindsym $mod+Shift+Prior move workspace to output up
@@ -218,6 +209,9 @@ bindsym $mod+F8 exec --no-startup-id bash $HOME/.config/i3/script/monitor_ctl.sh
 # screenshot
 bindsym Print exec --no-startup-id import -window root ~/Pictures/screenshot`date "+%y%m%d%H%M"`.jpg
 
+# mpd
+bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/rofi-mpd/rofi_mpd.py
+
 # startup apps
 exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
 exec --no-startup-id ~/.config/i3/script/monitor_detect.sh
@@ -227,7 +221,6 @@ exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id xset s off -dpms
 exec --no-startup-id dropbox
-#exec --no-startup-id nm-applet
 
 # application setting(float)
 for_window [class="Lxappearance"] floating enable, resize set 600 400
@@ -235,5 +228,3 @@ for_window [class="Pavucontrol"] floating enable, resize set 600 400
 for_window [class="Fcitx-config-gtk3"] floating enable, resize set 600 400
 for_window [class="mozc_tool"] floating enable, resize set 600 400
 for_window [class="Blueman-manager"] floating enable, resize set 600 400
-for_window [class="Gnome-terminal"] floating enable move absolute position 990 px 470 px, resize set 600 400
-# for_window [class="Nm-connection-editor"] floating enable, resize set 600 400

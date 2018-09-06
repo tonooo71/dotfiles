@@ -10,8 +10,7 @@
 c.completion.height = '50%'
 
 ## Minimum amount of characters needed to update completions.
-## Type: Int
-# c.completion.min_chars = 1
+c.completion.min_chars = 1
 
 ## Move on to the next part when there's only one possible completion left.
 c.completion.quick = True
@@ -23,7 +22,6 @@ c.completion.scrollbar.padding = 2
 c.completion.scrollbar.width = 10
 
 ## When to show the autocompletion window.
-## Type: String
 ## Valid values:
 ##   - always: Whenever a completion is available.
 ##   - auto: Whenever a completion is requested.
@@ -31,7 +29,6 @@ c.completion.scrollbar.width = 10
 # c.completion.show = 'always'
 
 ## Shrink the completion to be smaller than the configured size if there are no scrollbars.
-## Type: Bool
 # c.completion.shrink = False
 
 ## Format of timestamps (e.g. for the history completion).

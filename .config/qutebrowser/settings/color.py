@@ -12,11 +12,11 @@ purple0 = '#c678dd'
 teal0   = '#56b6c2'
 
 ## Background color of the completion widget category headers.
-# c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #888888, stop:1 #505050)'
+c.colors.completion.category.bg = 'qlineargradient(x1:0, y1:0, x2:0, y2:0, stop:0 #282c34, stop:1 #282c34)'
 ## Bottom border color of the completion widget category headers.
-# c.colors.completion.category.border.bottom = 'black'
+c.colors.completion.category.border.bottom = mono0
 ## Top border color of the completion widget category headers.
-# c.colors.completion.category.border.top = 'black'
+c.colors.completion.category.border.top = mono0
 ## Foreground color of completion widget category headers.
 c.colors.completion.category.fg = mono3
 ## Text color of the completion widget. May be a single color to use for all columns or a list of three colors, one for each column.
@@ -45,15 +45,15 @@ c.colors.downloads.bar.bg = mono0
 ## Background color for downloads with errors.
 c.colors.downloads.error.bg = red0
 ## Foreground color for downloads with errors.
-c.colors.downloads.error.fg = mono3
+c.colors.downloads.error.fg = mono0
 ## Color gradient start for download backgrounds.
 c.colors.downloads.start.bg = blue0
 ## Color gradient start for download text.
-c.colors.downloads.start.fg = mono3
+c.colors.downloads.start.fg = mono0
 ## Color gradient stop for download backgrounds.
 c.colors.downloads.stop.bg = green0
 ## Color gradient end for download text.
-c.colors.downloads.stop.fg = mono3
+c.colors.downloads.stop.fg = mono0
 ## Color gradient interpolation system for download backgrounds.
 ## Type: ColorSystem
 ## Valid values:
@@ -107,12 +107,12 @@ c.colors.messages.warning.border = yellow0
 c.colors.messages.warning.fg = mono0
 
 ## Background color for prompts.
-# c.colors.prompts.bg = '#444444'
+c.colors.prompts.bg = mono0
 ## Border used around UI elements in prompts.
 ## Type: String
 # c.colors.prompts.border = '1px solid gray'
 ## Foreground color for prompts.
-# c.colors.prompts.fg = 'white'
+c.colors.prompts.fg = mono3
 ## Background color for the selected item in filename prompts.
 # c.colors.prompts.selected.bg = 'grey'
 

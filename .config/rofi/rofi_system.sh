@@ -8,7 +8,7 @@ list=(
   "Reboot"      "systemctl reboot"
   "Shutdown"    "systemctl poweroff"
   "Suspend"     "systemctl suspend"
-  "Logout"	"i3-msg exit"
+  "Logout"      "i3-msg exit"
 )
 
 for (( i=1; i<=$((${#list[@]}/2)); i++ )); do
