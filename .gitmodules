@@ -1,0 +1,3 @@
+[submodule ".config/rofi/rofi-mpd"]
+	path = .config/rofi/rofi-mpd
+	url = git@github.com:tonooo71/rofi-mpd-client.git
