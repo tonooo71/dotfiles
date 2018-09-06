@@ -33,6 +33,7 @@
 !/.config/qutebrowser/settings
 # rofi
 !/.config/rofi
+/.config/rofi/rofi-mpd
 # delete files
 .netrwhist
 
