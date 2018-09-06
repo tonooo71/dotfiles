@@ -3,16 +3,24 @@
 volume=$(pamixer --get-volume)
 mute=$(pamixer --get-mute)
 
-if [ $mute = "true" ]; then
-    echo "%{F#e06c75} "
-else
-    if [ $volume -eq 0 ]; then
-        echo " ${volume}%"
-    elif [ $volume -lt 30 ]; then
-        echo " ${volume}%"
-    elif [ $volume -lt 70 ]; then
-        echo " ${volume}%"
+if [[ $1 = click ]]; then
+    if [ $mute = true ]; then
+        notify-send "Mute: ${volume}%"
     else
-        echo "%{F#e5c07b} ${volume}%"
+        notify-send "Volume: ${volume}%"
+    fi
+else
+    if [ $mute = true -o $volume -eq 0 ]; then
+        echo "%{F#e06c75}"
+    else
+        if [ $volume -lt 10 ]; then
+            echo ""
+        elif [ $volume -lt 40 ]; then
+            echo ""
+        elif [ $volume -lt 70 ]; then
+            echo ""
+        else
+            echo "%{F#e5c07b}"
+        fi
     fi
 fi

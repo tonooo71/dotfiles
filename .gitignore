@@ -33,9 +33,7 @@
 !/.config/qutebrowser/settings
 # rofi
 !/.config/rofi
-#/.config/rofi/*
-#!/.config/rofi/config.rasi
-#!/.config/rofi/*.sh
+!/.config/dunst
 # delete files
 .netrwhist
 

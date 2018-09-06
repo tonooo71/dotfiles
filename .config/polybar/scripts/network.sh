@@ -8,8 +8,12 @@ if [ $nw_info != "--" ]; then
     if [ $nw_type = ethernet ]; then
         echo ""
     elif [ $nw_type = wifi ]; then
-        QUALITY=$(grep $nw_info /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
-        echo " $nw_ssid"
+        if [[ $1 = click ]]; then
+            QUALITY=$(grep $nw_info /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
+            notify-send "SSID :$nw_ssid($QUALITY%)"
+        else
+            echo ""
+        fi
     fi
 else
     [ $(nmcli r wifi) = "disabled" ] && nmcli r wifi on
