@@ -34,8 +34,8 @@
 # rofi
 !/.config/rofi
 /.config/rofi/*
-/.config/rofi/config.rasi
-/.config/rofi/*.sh
+!/.config/rofi/config.rasi
+!/.config/rofi/*.sh
 # delete files
 .netrwhist
 
