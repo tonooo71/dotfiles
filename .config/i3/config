@@ -214,6 +214,9 @@ bindsym Print exec --no-startup-id $HOME/.config/i3/script/screenshot.sh
 # mpd
 bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/rofi-mpd/rofi_mpd.py
 
+# notification
+bindsym $mod+Menu exec $HOME/.config/i3/script/notify.sh
+
 # startup apps
 exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
 exec --no-startup-id ~/.config/i3/script/monitor_detect.sh
