@@ -41,7 +41,7 @@ font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3 add_ws
-modules-center = xwindow
+modules-center = window
 modules-right = update bluetooth mpd network memory battery volume date
 
 separator =
@@ -201,6 +201,13 @@ click-left = exec termite -e ncmpcpp
 click-right = exec mpc next
 format-padding = 1
 format-background = ${colors.mono4}
+format-foreground = ${colors.green}
+
+[module/window]
+type = custom/script
+exec = ~/.config/polybar/scripts/window.sh
+interval = 0
+format-background = ${colors.mono0}
 format-foreground = ${colors.green}
 
 [module/bluetooth]
