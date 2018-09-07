@@ -114,7 +114,7 @@ c.prompt.radius = 10
 # c.qt.highdpi = False
 
 ## Show a scrollbar.
-c.scrolling.bar = False
+c.scrolling.bar = True
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not work with the `:scroll-px` command.
 c.scrolling.smooth = False
@@ -155,7 +155,7 @@ c.statusbar.position = 'bottom'
 ##   - tabs: Current active tab, e.g. `2`.
 ##   - keypress: Display pressed keys when composing a vi command.
 ##   - progress: Progress bar for the current page loading.
-c.statusbar.widgets = ['keypress', 'url', 'scroll', 'history', 'tabs', 'progress']
+c.statusbar.widgets = ['keypress', 'url', 'history', 'tabs', 'progress']
 
 ## What search to start when something else than a URL is entered.
 ## Type: String

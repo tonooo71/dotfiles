@@ -23,7 +23,7 @@ c.fonts.monospace = '"SauceCodePro Nerd Font Mono", "Noto Sans Mono", "DejaVu Sa
 ## Font used for prompts.
 # c.fonts.prompts = '10pt sans-serif'
 ## Font used in the statusbar.
-c.fonts.statusbar = 'bold 11pt monospace'
+c.fonts.statusbar = 'bold 10pt monospace'
 ## Font used in the tab bar.
 c.fonts.tabs = 'bold 11pt monospace'
 
