@@ -209,7 +209,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym $mod+F8 exec --no-startup-id bash $HOME/.config/i3/script/monitor_ctl.sh
 
 # screenshot
-bindsym Print exec --no-startup-id import -window root ~/Pictures/screenshot`date "+%y%m%d%H%M"`.jpg
+bindsym Print exec --no-startup-id $HOME/.config/i3/script/screenshot.sh
 
 # mpd
 bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/rofi-mpd/rofi_mpd.py
