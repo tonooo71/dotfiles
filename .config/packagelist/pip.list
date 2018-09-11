@@ -61,4 +61,4 @@ urllib3                      1.23
 webencodings                 0.5.1    
 wheel                        0.31.1   
 wrapt                        1.10.11  
-yapf                         0.23.0   
+yapf                         0.24.0   

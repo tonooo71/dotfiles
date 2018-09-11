@@ -7,7 +7,7 @@ if [[ $1 = click ]]; then
     if [ $mute = true ]; then
         notify-send "Mute: ${volume}%"
     else
-        notify-send "Volume: ${volume}%"
+        notify-send "VOL: ${volume}%"
     fi
 else
     if [ $mute = true -o $volume -eq 0 ]; then

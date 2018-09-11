@@ -92,7 +92,8 @@ font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3 add_ws
-modules-right = memory battery volume date
+modules-center = xwindow
+modules-right = battery volume date
 
 separator = 
 dim-value = 1.0
@@ -135,7 +136,8 @@ font-0 = Source Han Code JP H:pixelsize=11;2
 font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3 add_ws
-modules-right = memory battery volume date
+modules-center = xwindow
+modules-right = battery volume date
 
 separator = 
 dim-value = 1.0
@@ -159,6 +161,7 @@ click-left = exec ~/.config/polybar/scripts/add_ws.py
 [module/xwindow]
 type = internal/xwindow
 label = %title%
+label-maxlen = 50
 
 [module/i3]
 type = internal/i3
@@ -183,7 +186,7 @@ label-unfocused-padding = 2
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-background = ${colors.mono0}
+label-visible-background = ${colors.mono4}
 label-visible-foreground = ${colors.mono2}
 label-visible-padding = 2
 

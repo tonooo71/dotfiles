@@ -10,7 +10,7 @@ if [ $nw_info != "--" ]; then
     elif [ $nw_type = wifi ]; then
         if [[ $1 = click ]]; then
             QUALITY=$(grep $nw_info /proc/net/wireless | awk '{ print int($3 * 100 / 70) }')
-            notify-send "SSID :$nw_ssid($QUALITY%)"
+            notify-send "SSID: $nw_ssid($QUALITY%)"
         else
             echo ""
         fi

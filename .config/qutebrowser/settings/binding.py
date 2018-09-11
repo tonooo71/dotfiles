@@ -67,7 +67,7 @@
 # config.bind('F', 'hint all tab')
 # config.bind('G', 'scroll-to-perc')
 # config.bind('H', 'back')
-config.bind('J', 'scroll-page 0 1')  # config.bind('J', 'tab-next')
+config.bind('J', 'scroll-page 0 0.5')  # config.bind('J', 'tab-next')
 config.bind('K', 'scroll-page 0 -0.5')  # config.bind('K', 'tab-prev')
 # config.bind('L', 'forward')
 # config.bind('M', 'bookmark-add')

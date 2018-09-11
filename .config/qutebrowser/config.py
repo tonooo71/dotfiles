@@ -27,7 +27,8 @@ config.source('settings/binding.py')
 # config.load_autoconfig()
 
 ## Aliases for commands. The keys of the given dictionary are the aliases, while the values are the commands they map to.
-c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save', 'pass': 'spawn --userscript qute-lastpass'}
+c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save',
+             'pass': 'spawn --userscript qute-lastpass', 'pocket': 'spawn ~/.config/qutebrowser/scripts/pocket.py {url}'}
 
 ## Time interval (in milliseconds) between auto-saves of config/cookies/etc.
 c.auto_save.interval = 15000

@@ -31,6 +31,7 @@
 /.config/qutebrowser/*
 !/.config/qutebrowser/config.py
 !/.config/qutebrowser/settings
+!/.config/qutebrowser/scripts
 # rofi
 !/.config/rofi
 !/.config/dunst
