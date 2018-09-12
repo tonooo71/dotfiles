@@ -31,8 +31,6 @@
 /.config/qutebrowser/*
 !/.config/qutebrowser/config.py
 !/.config/qutebrowser/settings
-!/.config/qutebrowser/scripts
-/.config/qutebrowser/scripts/pocket_key.py
 # rofi
 !/.config/rofi
 !/.config/dunst
