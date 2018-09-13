@@ -28,7 +28,9 @@ config.source('settings/binding.py')
 
 ## Aliases for commands. The keys of the given dictionary are the aliases, while the values are the commands they map to.
 c.aliases = {'w': 'session-save', 'q': 'quit', 'wq': 'quit --save',
-             'pass': 'spawn --userscript qute-lastpass', 'pocket': 'spawn ~/.config/qutebrowser/scripts/pocket.py {url}'}
+             'pass': 'spawn --userscript qute-lastpass',
+             'pocket': 'spawn --userscript scripts.sh pocket {url}',
+             'ejdict': 'spawn --userscript scripts.sh ejdict'}
 
 ## Time interval (in milliseconds) between auto-saves of config/cookies/etc.
 c.auto_save.interval = 15000
@@ -64,7 +66,7 @@ c.keyhint.delay = 500
 c.keyhint.radius = 10
 
 ## Duration (in milliseconds) to show messages in the statusbar for. Set to 0 to never clear messages.
-c.messages.timeout = 2000
+c.messages.timeout = 5000
 
 ## How to open links in an existing instance if a new one is launched.
 ## This happens when e.g. opening a link from a terminal. See
