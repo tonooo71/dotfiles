@@ -5,6 +5,7 @@
 !/.xprofile
 !.gitignore
 !dotfiles.sh
+!README.md
 #ncmcpp
 !/.ncmpcpp
 /.ncmpcpp/*
