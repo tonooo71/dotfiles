@@ -93,7 +93,7 @@ font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3 add_ws
 modules-center = xwindow
-modules-right = battery volume date
+modules-right = mpd battery volume date
 
 separator = 
 dim-value = 1.0
@@ -137,7 +137,7 @@ font-1 = FontAwesome:pixelsize=12;3
 
 modules-left = i3 add_ws
 modules-center = xwindow
-modules-right = battery volume date
+modules-right = mpd battery volume date
 
 separator = 
 dim-value = 1.0
@@ -200,8 +200,8 @@ label-urgent-padding = 2
 type = custom/script
 exec = [[ $(mpc | grep playing | wc -l) -eq 1 ]] && echo  || echo "%{F#abb2bf}"
 exec-if = exec mpc playlist | grep -
-click-left = exec termite -e ncmpcpp
-click-right = exec mpc next
+click-left = [[ $(mpc | grep playing | wc -l) -eq 1 ]] && notify-send "$(mpc | sed -n 1P)"
+click-right = exec termite -e ncmpcpp
 format-padding = 1
 format-background = ${colors.mono4}
 format-foreground = ${colors.green}

@@ -41,7 +41,7 @@ PyGObject                    3.30.1
 pyparsing                    2.2.1    
 pyPEG2                       2.15.2   
 PyQt5-sip                    4.19.12  
-python-jsonrpc-server        0.0.1    
+python-jsonrpc-server        0.0.2    
 python-language-server       0.21.2   
 python-musicpd               0.4.2    
 pytoml                       0.1.19   
@@ -51,7 +51,7 @@ ranger-fm                    1.9.1
 requests                     2.19.1   
 requests-file                1.4.3    
 retrying                     1.3.3    
-setuptools                   40.4.2   
+setuptools                   40.4.3   
 six                          1.11.0   
 team                         1.0      
 tldextract                   2.2.0    
