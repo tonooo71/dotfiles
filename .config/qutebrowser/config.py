@@ -117,7 +117,7 @@ c.prompt.radius = 10
 # c.qt.highdpi = False
 
 ## Show a scrollbar.
-c.scrolling.bar = True
+c.scrolling.bar = 'always'
 
 ## Enable smooth scrolling for web pages. Note smooth scrolling does not work with the `:scroll-px` command.
 c.scrolling.smooth = False

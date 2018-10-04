@@ -250,6 +250,7 @@ format-foreground = ${colors.mono2}
 type = custom/script
 exec = date '+%H:%M'
 interval = 60
+click-left = notify-send "$(date '+%m/%d %a')"
 format-background = ${colors.green}
 format-foreground = ${colors.mono0}
 format-padding = 1
