@@ -12,7 +12,7 @@ repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'Shougo/deol.nvim'
-rev = 'a1b5108fd'
+#rev = 'a1b5108fd'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
