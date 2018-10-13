@@ -35,6 +35,8 @@
 # rofi
 !/.config/rofi
 !/.config/dunst
+# zathura
+!/.config/zathura
 # delete files
 .netrwhist
 __pycache__
