@@ -25,7 +25,7 @@ lightdm-gtk-greeter-settings 1.2.2
 lit                          0.7.0.dev0
 lockfile                     0.12.2    
 louis                        3.7.0     
-MarkupSafe                   1.0       
+MarkupSafe                   1.1.0     
 mccabe                       0.6.1     
 msgpack                      0.5.6     
 neovim                       0.3.0     

@@ -18,6 +18,10 @@ hook_post_source = '''
     let g:deoplete#omni_patterns = {}
 '''
 
+[[plugins]]
+repo = 'zah/nim.vim'
+on_ft = ['nim']
+
 #[[plugins]]
 #repo = 'zchee/deoplete-jedi'
 #on_ft = ['python']
