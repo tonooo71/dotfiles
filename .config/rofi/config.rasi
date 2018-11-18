@@ -52,14 +52,11 @@ hide-scrollbar: true;
 /*	show-match: true;*/
 /*	theme: ;*/
 /*bg border separator*/
-color-window:    "argb:ff282c34, argb:aa282c34, argb:ff282c34";
+color-window:    "argb:ee282c34, argb:ff282c34, argb:00282c34";
 /*bg fg bg(alt) bg(highlight) fg(highlight)*/
-/*color-normal:    "argb:00000000, argb:ccc8ccd4, argb:00000000, argb:cc98c379, argb:cc282c34";*/
-/*color-active:    "argb:00000000, argb:cc61afef, argb:00000000, argb:cc61afef, argb:cc282c34";*/
-/*color-urgent:    "argb:00000000, argb:cce06c75, argb:00000000, argb:cce06c75, argb:cc282c34";*/
-color-normal:    "argb:00000000, argb:ffabb2bf, argb:00000000, argb:ff282c34, argb:ff98c379";
-color-active:    "argb:00000000, argb:ff61afef, argb:00000000, argb:ff282c34, argb:ff61afef";
-color-urgent:    "argb:00000000, argb:ffe06c75, argb:00000000, argb:ff282c34, argb:ffe06c75";
+color-normal:    "argb:00000000, argb:ffabb2bf, argb:00000000, argb:00282c34, argb:ff98c379";
+color-active:    "argb:00000000, argb:ff61afef, argb:00000000, argb:00282c34, argb:ff61afef";
+color-urgent:    "argb:00000000, argb:ffe06c75, argb:00000000, argb:00282c34, argb:ffe06c75";
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	pid: "/run/user/1000/rofi.pid";*/

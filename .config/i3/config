@@ -219,6 +219,7 @@ bindsym $mod+Menu exec --no-startup-id $HOME/.config/i3/script/notify.sh
 
 # startup apps
 exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
+exec --no-startup-id compton -b --config ~/.config/compton/compton.conf -d :0.0
 exec --no-startup-id ~/.config/i3/script/monitor_detect.sh
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id fcitx

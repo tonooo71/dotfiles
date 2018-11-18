@@ -24,12 +24,16 @@ do
         st_prev=$st_next
         if [ $st_next = "eDP1" ]; then
             xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off --output DP2 --off
+            compton -b --config ~/.config/compton/compton.conf -d :0.0
         elif [ $st_next = "HDMI1" ]; then
             xrandr --output eDP1 --mode 1600x900 --output HDMI1 --auto --above eDP1 --output DP2 --off
+            compton -b --config ~/.config/compton/compton.conf -d :0.1
         elif [ $st_next = "DP2" ]; then
             xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off --output DP2 --auto --above eDP1
+            compton -b --config ~/.config/compton/compton.conf -d :0.1
         elif [ $st_next = "ALL" ]; then
             xrandr --output eDP1 --mode 1600x900 --output HDMI1 --auto --above eDP1 --output DP2 --auto --right-of HDMI1
+            compton -b --config ~/.config/compton/compton.conf -d :0.2
         fi
         ~/.fehbg
 	~/.config/polybar/launch.sh
