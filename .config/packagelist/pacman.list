@@ -271,7 +271,7 @@ libid3tag 0.15.1b-9
 libidn 1.35-1
 libidn2 2.0.5-1
 libiec61883 1.2.0-5
-libimobiledevice 1.2.0+66+g5a85432-2
+libimobiledevice 1.2.0+87+g92c5462-1
 libinput 1.12.3-1
 libixion 0.14.1-1
 libjpeg-turbo 2.0.0-1
@@ -363,7 +363,7 @@ libunistring 0.9.10-1
 libunwind 1.2.1-2
 libupnp 1.6.25-1
 libusb 1.0.22-1
-libusbmuxd 1.0.10+13+gc724e70-1
+libusbmuxd 1.0.10+29+g9db5747-1
 libutil-linux 2.33-2
 libuv 1.24.0-1
 libva 2.3.0-1
@@ -375,7 +375,7 @@ libvpx 1.7.0-1
 libvterm 0.1.git1.c4317a6-3
 libwacom 0.32-1
 libwbclient 4.8.5-1
-libwebp 1.0.0-1
+libwebp 1.0.1-1
 libwmf 0.2.8.4-14
 libwpd 0.10.2-1
 libwpg 0.3.2-1
@@ -654,7 +654,7 @@ udisks2 2.8.1-1
 unibilium 2.0.0-1
 unzip 6.0-13
 upower 0.99.9-1
-usbmuxd 1.1.0+48+g1cc8b34-1
+usbmuxd 1.1.0+48+g1cc8b34-2
 usbutils 010-1
 util-linux 2.33-2
 v4l-utils 1.16.1-1
