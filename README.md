@@ -12,7 +12,7 @@
 
 ## .config
 
-  * compton (not used)
+  * compton
   * dunst
   * i3
   * mpd
