@@ -16,5 +16,5 @@ if xrandr | grep "HDMI1 connected"; then
 fi
 
 ~/.fehbg
-compton -b --config ~/.config/compton/compton.conf
+# compton -b --config ~/.config/compton/compton.conf
 ~/.config/polybar/launch.sh
