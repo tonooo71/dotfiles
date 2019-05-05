@@ -9,6 +9,7 @@ list=(
   "Shutdown"    "systemctl poweroff"
   "Suspend"     "systemctl suspend"
   "Logout"      "i3-msg exit"
+  ##  Other  ##
 )
 
 for (( i=1; i<=$((${#list[@]}/2)); i++ )); do

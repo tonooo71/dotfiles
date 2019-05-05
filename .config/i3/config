@@ -202,31 +202,32 @@ bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/.config/i3/script/set_vo
 bindsym XF86AudioMute exec --no-startup-id $HOME/.config/i3/script/set_volume.sh mute
 
 # backlight
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+# bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+# bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # external monitor
-bindsym $mod+F8 exec --no-startup-id bash $HOME/.config/i3/script/monitor_ctl.sh
+# bindsym $mod+F8 exec --no-startup-id bash $HOME/.config/i3/script/monitor_ctl.sh
 
 # screenshot
 bindsym Print exec --no-startup-id $HOME/.config/i3/script/screenshot.sh
 
 # mpd
-bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/rofi-mpd/rofi_mpd.py
+# bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/rofi-mpd/rofi_mpd.py
 
 # notification
 bindsym $mod+Menu exec --no-startup-id $HOME/.config/i3/script/notify.sh
 
 # startup apps
-exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
-exec --no-startup-id ~/.config/i3/script/monitor_detect.sh
+# exec --no-startup-id xrandr --output eDP1 --mode 1600x900 --output HDMI1 --off
+# exec --no-startup-id ~/.config/i3/script/monitor_detect.sh
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id fcitx
 exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id xset s off -dpms
 exec --no-startup-id ~/.config/polybar/launch.sh
+exec --no-startup-id xrandr --output DP-4 --auto --output HDMI-0 --off
 # exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
-exec --no-startup-id dropbox
+# exec --no-startup-id dropbox
 
 # application setting(float)
 for_window [class="Lxappearance"] floating enable, resize set 600 400
