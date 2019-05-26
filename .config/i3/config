@@ -226,6 +226,7 @@ exec --no-startup-id light-locker --lock-on-suspend
 exec --no-startup-id xset s off -dpms
 exec --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id xrandr --output DP-4 --auto --output HDMI-0 --off
+exec --no-startup-id i3-msg workspace 1
 # exec --no-startup-id compton -b --config ~/.config/compton/compton.conf
 # exec --no-startup-id dropbox
 
